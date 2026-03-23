@@ -11,4 +11,11 @@ class Solution:
 
         return str1[:gcd(len(str1), len(str2))]
 
-#I should have used this solution of eucliand math and tried to find the gcd! What I made a mistake on was trying to find the sub string and verify the substring instead should have just used the math of the lengths 
+#I should have used this solution of eucliand math and tried to find the gcd!
+#What I made a mistake on was trying to find the sub string and verify the substring 
+#instead should have just used the math of the lengths.
+
+#If next time its a pattern question try this trick! 
+#if str1 + str2 != str2 + str1:
+#            return ""
+#This will get rid of the need for verifying if its a substring or not!
