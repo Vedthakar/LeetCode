@@ -10,3 +10,5 @@ class Solution:
             return len1
 
         return str1[:gcd(len(str1), len(str2))]
+
+#I should have used this solution of eucliand math and tried to find the gcd! What I made a mistake on was trying to find the sub string and verify the substring instead should have just used the math of the lengths 
