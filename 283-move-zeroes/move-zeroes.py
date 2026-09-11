@@ -3,19 +3,14 @@ class Solution:
         """
         Do not return anything, modify nums in-place instead.
         """
-        # idea is start and go through the list if you find a 0 than get the tr to go until non zero found. and just flip.
-        if len(nums) <= 1:
-            return
-        p = 0
-        tr = 0
-        i = 0
-        while(tr < len(nums)):
-            if(nums[tr] != 0):
-                print(p)
-                i = nums[p]
-                nums[p] = nums[tr]
-                nums[tr] = i
-                p += 1
-                tr += 1
-            else:
-                tr += 1        
+        nonzero = -1
+        for i in range(len(nums)):
+            if(nums[i] == 0):
+                for j in range(i+1, len(nums)):
+                    if(nums[j] != 0):
+                        nonzero = j
+                        break
+                if(nonzero != -1):
+                    temp = nums[i]
+                    nums[i] = nums[nonzero]
+                    nums[nonzero] = temp
